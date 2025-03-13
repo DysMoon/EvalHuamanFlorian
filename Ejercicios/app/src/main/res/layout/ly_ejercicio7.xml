@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFACD"
+    tools:context=".MainActivity">
+
+  <!-- Título -->
+  <TextView
+      android:id="@+id/tvTitulo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Matrícula de Estudiante"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="16dp" />
+
+  <!-- Campo de texto para el nombre -->
+  <EditText
+      android:id="@+id/etNombre"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:hint="Ingresar nombre del estudiante"
+      app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="16dp"
+      android:padding="8dp" />
+
+  <!-- Turno -->
+  <TextView
+      android:id="@+id/tvTurno"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="17dp"
+      android:text="Turno:"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toStartOf="@+id/rgTurno"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/etNombre" />
+
+  <!-- Cursos -->
+
+  <RadioGroup
+      android:id="@+id/rgTurno"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="232dp"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toEndOf="@id/tvTurno"
+      app:layout_constraintTop_toBottomOf="@id/etNombre">
+
+    <RadioButton
+        android:id="@+id/rbManana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Mañana" />
+
+    <RadioButton
+        android:id="@+id/rbTarde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tarde" />
+
+    <RadioButton
+        android:id="@+id/rbNoche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Noche" />
+  </RadioGroup>
+
+  <TextView
+      android:id="@+id/tvCursos"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="17dp"
+      android:text="Curso:"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/rgTurno" />
+
+  <!-- Monto a pagar -->
+  <LinearLayout
+      android:id="@+id/linearLayout2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="94dp"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/tvCursos"
+      app:layout_constraintTop_toBottomOf="@id/rgTurno">
+
+    <CheckBox
+        android:id="@+id/cbPython"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Python" />
+
+    <CheckBox
+        android:id="@+id/cbJava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Java" />
+
+    <CheckBox
+        android:id="@+id/cbCSharp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="C#" />
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/tvMonto"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="48dp"
+      android:layout_marginTop="32dp"
+      android:text="Monto a pagar:"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+  <!-- Botones -->
+  <EditText
+      android:id="@+id/etMonto"
+      android:layout_width="wrap_content"
+      android:layout_height="48dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="32dp"
+      android:layout_marginEnd="155dp"
+      android:width="100dp"
+      android:background="@android:drawable/editbox_background"
+      android:inputType="numberDecimal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@id/tvMonto"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+  <LinearLayout
+      android:id="@+id/linearLayout3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:gravity="center"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Registrar" />
+
+    <Button
+        android:id="@+id/btnListado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Listado" />
+
+    <Button
+        android:id="@+id/btnCerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar" />
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActividadEjercicio2">
+
+
+    <EditText
+        android:id="@+id/edtPresupuesto"
+        android:layout_width="309dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:hint="Ingrese el presupuesto"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="311dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:text="Calcular combinaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPresupuesto" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="321dp"
+        android:layout_height="428dp"
+        android:layout_marginTop="32dp"
+        android:paddingTop="16dp"
+        android:text="[Resultados]"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
